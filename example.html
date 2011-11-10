@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>distuli</title>
+<meta name="author" content="daniel.kapusta">
+
+<link rel="stylesheet" href="style.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="distuli.js"></script>
+
+</head>
+<body>
+
+<div id="desc" class="tile">
+<p>view source to see how it works</p>
+</div>
+
+<br>
+
+<div id="_1" class="tile animation_boilerplate">
+<p>click me</p>
+</div>
+
+<br>
+
+<div id="_2" class="tile animation_boilerplate" style="opacity: 0;">
+<p>fade in from the left</p>
+</div>
+
+
+<script>
+
+var yay = {};
+
+(function($) {
+  var that = this;
+  
+  this.firstClick = function($thing_one, $thing_two) {
+    $thing_one.addClass("clickable").one("click", function() {
+      $(this).html("<p>i was clicked!</p>").distuli({
+        name: "tada",
+        complete: function() {
+          $(this).removeClass("clickable tada").html("<p>click the other thing now</p>");
+          $thing_two.distuli({ /* you can nest animations! */
+            name: "fadeInLeft",
+            complete: function() {
+              $(this).html("<p>ok, now click me</p>");
+              that.secondClick($thing_one, $thing_two); /* you can set up animations elsewhere! */
+            }
+          }).addClass("clickable");
+        }
+      });
+    })
+  };
+  
+  this.secondClick = function($thing_one, $thing_two) {
+    $thing_two.one("click", function() {
+      $(this).html("<p>bye!</p>").distuli({
+        name: "fadeOutRightBig",
+        complete: function() {
+          $(this).removeClass("clickable fadeInLeft fadeOutRightBig").html("<p>fade in from the left</p>");
+          $thing_one.html("<p>click me again</p>");
+          that.firstClick($thing_one, $thing_two);
+        }
+      });
+    });
+  };
+
+}).call(yay, jQuery);
+
+$(document).ready(function() {
+  yay.firstClick($("#_1"), $("#_2"));
+});
+
+</script>
+
+</body>
+</html>
