@@ -19,7 +19,7 @@ $("#thingy").distuli({
 ## Details
 * **name** is a CSS selector name.
 * **complete** is a function that fires when the transition or animation finishes.
-* You may use $(this) in the function to do the stuff to the element that was animated.
+* You may use $(this) in the function to do stuff to the element that was animated.
 * The plugin does not remove the selector name from the element upon completion (so the programmer can decide when it's best to do so).
 
 ## Roadmap
