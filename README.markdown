@@ -6,15 +6,15 @@
 * The word is uncommon and thus should be safe in your $.fn namespace.
 
 ## Usage
-  <pre>
-  $("#thingy").distuli({
-    name: "name", // the name of a css selector with a transition or animation
-    complete: function() {
-      //do stuff
-      $(this).html("I got animated."); // the element with an id of "thing" now has "I got animated." in it.
-    }
-  });
-  </pre>
+<pre>
+$("#thingy").distuli({
+  name: "name", // the name of a css selector with a transition or animation
+  complete: function() {
+    //do stuff
+    $(this).html("I got animated."); // the element with an id of "thing" now has "I got animated." in it.
+  }
+});
+</pre>
 
 ## Details
 * **name** is a CSS selector name.
