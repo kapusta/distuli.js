@@ -1,0 +1,39 @@
+{
+    "name": "distuli",
+    "version": "1.0",
+    "title": "distuli.js",
+    "author": {
+        "name": "Dan Kapusta",
+        "url": "https://github.com/kapusta"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.5"
+    },
+    "description": "Distuli uses jQuery deferreds to do things (that you specify) after CSS animations and/or transitions are complete.",
+    "keywords": [
+        "animate",
+        "transition",
+        "css3",
+        "deferred"
+    ],
+    "homepage": "https://github.com/kapusta/distuli.js",
+    "contributors": [
+      {
+          "name": "Dan Kapusta",
+          "url": "https://github.com/kapusta"
+      },
+      {
+          "name": "Mark MacKay",
+          "url": "https://github.com/duopixel"
+      }
+    ],
+    "files": [
+        "distuli.js"
+    ]
+}
