@@ -37,5 +37,5 @@ $("#thingy").distuli({
 * Many thanks to [the entire jQuery development team](http://jquery.org/team/).
 
 ## Copyright and License
-* Copyright (c) 2011 Daniel Kapusta
+* Copyright (c) 2011 - 2012 [Dan Kapusta](http://about.me/dankapusta)
 * Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php)
