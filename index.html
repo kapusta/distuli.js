@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Distuli.js by kapusta</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Distuli.js</h1>
+        <p>distuli is a jQuery plugin that uses jQuery deferreds to do things after CSS animations and/or transitions are complete</p>
+
+        <p class="view"><a href="https://github.com/kapusta/distuli.js">View the Project on GitHub <small>kapusta/distuli.js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/kapusta/distuli.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kapusta/distuli.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kapusta/distuli.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>distuli is a jQuery plugin</h1>
+
+<ul>
+<li>This plugin uses jQuery deferreds to do things after CSS animations and/or transitions are complete.</li>
+</ul><h1>distuli?</h1>
+
+<ul>
+<li>Google translate provided distuli as the Latin translation of deferred.</li>
+<li>The word is uncommon and thus should be safe in your $.fn namespace.</li>
+</ul><h2>Usage</h2>
+
+<pre>
+$("#thingy").distuli({
+  name: "name", // the name of a css selector with a transition or animation
+  complete: function() {
+    //do stuff
+    $(this).html("I got animated."); // the element with an id of "thingy" now has "I got animated." in it.
+  }
+});
+</pre>
+
+<h2>Details</h2>
+
+<ul>
+<li>
+<strong>name</strong> is a CSS selector name.</li>
+<li>
+<strong>complete</strong> is a function that fires when the transition or animation finishes.</li>
+<li>You may use $(this) in the function to do stuff to the element that was animated.</li>
+<li>The plugin does not remove the selector name from the element upon completion (so the programmer can decide when it's best to do so).</li>
+</ul><h2>Roadmap</h2>
+
+<ul>
+<li>My plans include support for listing multiple selector names and tracking/reporting completion of each step.</li>
+</ul><h2>About the Author</h2>
+
+<ul>
+<li>
+<a href="http://about.me/dankapusta">Dan Kapusta</a> is a UI Engineer at AOL and is trying to keep things simple.</li>
+<li>I wrote this to learn more about css animations and jQuery deferreds.</li>
+<li>This is my first plugin, so it's far from perfect.</li>
+</ul><h2>Inspiration and Acknowledgments</h2>
+
+<ul>
+<li>I thought to write this after seeing <a href="http://daneden.me/animate/">Dan Eden's animate.css</a>
+</li>
+<li>The plugin Boilerplate is from <a href="http://addyosmani.com">Addy Osmani's</a> <a href="http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/">Essential jQuery Plugin Patterns</a> article.</li>
+<li>The transition/animation name pattern was adapted from code by <a href="http://duopixel.ca/">Mark MacKay</a>.</li>
+<li>Many thanks to <a href="http://jquery.org/team/">the entire jQuery development team</a>.</li>
+</ul><h2>Copyright and License</h2>
+
+<ul>
+<li>Copyright (c) 2011 Daniel Kapusta</li>
+<li>Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/kapusta">kapusta</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-16063192-6");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
